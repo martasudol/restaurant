@@ -1,5 +1,9 @@
 import React from 'react';
-import {Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink, Collapse} from 'reactstrap';
+import {Link} from 'react-router-dom';
+import {Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink, Collapse } from 'reactstrap';
+import './header.css';
+// import AboutUs from '../../components/about_us/about_us';
+import '../router';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -27,13 +31,13 @@ export default class Header extends React.Component {
                     <Collapse isOpen={!this.state.collapsed} navbar>
                         <Nav navbar>
                             <NavItem>
-                                <NavLink href="#">About us</NavLink>
+                                <NavLink tag={Link} to="/about_us">About us</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#">Menu</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#">Contact</NavLink>
+                                <NavLink href="#">Kontakt</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
